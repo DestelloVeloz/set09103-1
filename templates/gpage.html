@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>G Chords</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+      rel="stylesheet" />
+    <style>
+      body {
+        padding-top: 70px;
+        padding-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"><span>
+          </button>
+          <a class="navbar-brand" href="/">Guitar Chords</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/C">C</a></li>
+            <li><a href="/D">D</a></li>
+            <li><a href="/E">E</a></li>
+            <li><a href="/F">F</a></li>
+            <li><a href="/G">G</a></li>
+            <li><a href="/A">A</a></li>
+            <li><a href="/B">B</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container"><center>
+      <h1>G Chords</h1>
+      <h3>G Major</h3>
+      <img src="/static/chords/g-major-1.gif">
+      <h3>G Minor</h3>
+      <img src="/static/chords/g-minor-1.gif">
+    </div></center>
+    
+    <!--
+    <div style="position: relative; text-align:center">
+      <p style="position:fixed; bottom: 0; width:100%;">Created by Przemek</p>
+    </div>
+    -->
+
+    
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script
+    src={{ url_for('static', filename='js/bootsrap.min.js') }}"></stript>
+  </body>
+</html>
