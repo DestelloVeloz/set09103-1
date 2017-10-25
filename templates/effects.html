@@ -9,7 +9,7 @@
   </head>
   <body>
     <div>
-      <img src="/static/header.jpg">
+      <img src="/static/header.jpg" style="width: 100%;">
     </div>
     <ul id="topul">
       <li id="topli"><a href="/">Home</a></li>
@@ -31,12 +31,12 @@
 
     <div id="container">
       {% for items in data %}
-        <div id="items">
+        <a href="/effects/single/{{ items.id }}" class="div" id="items">
           <img src="{{ url_for('static',
             filename='uploads/effects/' + items.photo) }}"
               style="height: 100%; width: 100%"/>
           <p><center>{{ items.brand + " " + items.model }}</p></center>
-        </div>
+        </a>
       {% endfor %}
     </div>
 

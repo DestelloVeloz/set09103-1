@@ -204,6 +204,51 @@ def add():
   else:
     return render_template('effectadd.html'), 200
 
+@app.route('/guitars/single/<zoom>')
+def guitarzoom(zoom=None):
+  import json
+  try:
+    with open('static/data.json', 'r') as f:
+      data = json.load(f)
+  except:
+    pass
+  single = []
+  for item in data["guitars"]:
+    if item["id"] == int(zoom):
+      single = item
+
+  return render_template('guitarzoom.html', data=single), 200
+
+@app.route('/amps/single/<zoom>')
+def ampzoom(zoom=None):
+  import json
+  try:
+    with open('static/data.json', 'r') as f:
+      data = json.load(f)
+  except:
+    pass
+  single = []
+  for item in data["amps"]:
+    if item["id"] == int(zoom):
+      single = item
+
+  return render_template('ampzoom.html', data=single), 200
+
+@app.route('/effects/single/<zoom>')
+def effectzoom(zoom=None):
+  import json
+  try:
+    with open('static/data.json', 'r') as f:
+      data = json.load(f)
+  except:
+    pass
+  single = []
+  for item in data["effects"]:
+    if item["id"] == int(zoom):
+      single = item
+
+  return render_template('effectzoom.html', data=single), 200
+
 #about page
 @app.route('/about/')
 def about():

@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Guitars</title>
-      <link href="{{ url_for('static', filename='navbar.css') }}"
-        rel="stylesheet" />
+    <link href="{{ url_for('static', filename='navbar.css') }}"
+      rel="stylesheet" />
   </head>
   <body>
     <div>
@@ -33,12 +33,12 @@
     <!-- MAIN CONTAINER FOR ITEMS(GUITARS) --!>
     <div id="container">
       {% for items in data %} <!-- ITERATE THROUGH ITEMS AND DISPLAY --!>
-        <div id="items">
+        <a href="/guitars/single/{{ items.id }}" class="div" id="items">
           <img src="{{ url_for('static', 
             filename='uploads/guitars/' + items.photo) }}" 
               style="height: 100%; width: 100%"/>
           <p><center>{{ items.brand + " " + items.model }}</p></center>
-        </div>
+        </a>
       {% endfor %}
     </div>
 
